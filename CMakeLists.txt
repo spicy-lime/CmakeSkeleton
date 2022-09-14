@@ -22,6 +22,7 @@ set_property(TARGET main PROPERTY CXX_STANDARD 20)
 
 add_subdirectory(googletest)
 include_directories(googletest/googletest/include) # this is so we can #include <gtest/gtest.h>
+include_directories(igloo) 
 add_executable(tests ${tests})
 set_property(TARGET tests PROPERTY CXX_STANDARD 20)
 target_link_libraries(tests PRIVATE gtest)
